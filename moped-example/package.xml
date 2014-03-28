@@ -1,0 +1,24 @@
+<package>
+  <name>moped-example</name>
+  <version>0.0.0</version>
+  <description>
+
+    Example of usage of MOPED and ROS in a test dataset.
+
+  </description>
+  <maintainer email="mwills@wpi.edu">Mitchell Wills</maintainer>
+  <author>Alvaro Collet</author>
+  <license>BSD</license>
+
+  <url></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>OpenCV</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>imagesender</run_depend>
+</package>
+
+
