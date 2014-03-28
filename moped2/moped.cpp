@@ -49,7 +49,7 @@
 #include <pr_msgs/ObjectPose.h>
 #include <pr_msgs/ObjectPoseList.h>
 #include <pr_msgs/Enable.h>
-#include <cv_bridge/CvBridge.h>
+#include <cv_bridge/cv_bridge.h>
 
 #include <moped.hpp>
 #include <boost/algorithm/string.hpp>
@@ -170,9 +170,7 @@ public:
 	void process( const sensor_msgs::ImageConstPtr& in ) {
 		
     if (Enabled){
-      sensor_msgs::CvBridge bridge;
-      
-      IplImage *gs = bridge.imgMsgToCv( in );
+      cv_bridge::CvImagePtr gs = cv_bridge::toCvCopy( in );
     
       vector<SP_Image> images;
       
@@ -186,13 +184,13 @@ public:
       mopedImage->cameraPose.translation.init(0.,0.,0.);
       mopedImage->cameraPose.rotation.init(0.,0.,0.,1.);
       
-      mopedImage->width = gs->width;
-      mopedImage->height = gs->height;
+      mopedImage->width = gs->image.cols;
+      mopedImage->height = gs->image.rows;
       
-      mopedImage->data.resize( gs->width * gs->height );
+      mopedImage->data.resize( gs->image.cols * gs->image.rows );
       
-      for (int y = 0; y < gs->height; y++) 
-        memcpy( &mopedImage->data[y*gs->width], &gs->imageData[y*gs->widthStep], gs->width );
+      for (int y = 0; y < gs->image.rows; y++) 
+        memcpy( &mopedImage->data[y*gs->image.cols], &gs->image.data[y*gs->image.step], gs->image.cols );
 
 
       images.push_back( mopedImage );

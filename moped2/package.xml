@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package>
+  <name>moped2</name>
+  <version>0.0.0</version>
+  <description>
+  Fast pose estimation and object recognition system from a single image, in C++. Original code from Alvaro Collet, magically optimized and speeded up by Manuel Martinez.
+  </description>
+  <maintainer email="mwills@wpi.edu">Mitchell Wills</maintainer>
+  <author>Alvaro Collet (alvaro.collet@gmail.com), Manuel Martinez (salutte@gmail.com), Siddhartha Srinivasa (siddhartha.srinivasa@intel.com)</author>
+  <license>BSD</license>
+
+  <url>http://personalrobotics.ri.cmu.edu/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>pr_msgs</build_depend>
+  <build_depend>opencv2</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>GLEW</build_depend>
+  <build_depend>DevIL</build_depend>
+  <build_depend>OpenCV</build_depend>
+  <build_depend>siftgpu</build_depend>
+  <build_depend>OpenGL</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>pr_msgs</run_depend>
+  <run_depend>opencv2</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>GLEW</run_depend>
+  <run_depend>DevIL</run_depend>
+  <run_depend>OpenCV</run_depend>
+  <run_depend>OpenGL</run_depend>
+
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+
