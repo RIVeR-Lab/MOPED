@@ -49,7 +49,7 @@
 #define DEFAULT_DISPLAY_LEVEL 1
 
 //#define PERFORMANCE_TESTING_GPU 1
-//#define PERFORMANCE_TESTING_CPU 1
+#define PERFORMANCE_TESTING_CPU 1
 
 namespace MopedNS {
 	
@@ -129,7 +129,7 @@ namespace MopedNS {
 		
 #ifndef PERFORMANCE_TESTING
 		//		
-		//pipeline.addAlg( "GLOBAL_DISPLAY", new GLOBAL_DISPLAY( 2 ) );
+		pipeline.addAlg( "GLOBAL_DISPLAY", new GLOBAL_DISPLAY( 2 ) );
 #endif
 	}
 };

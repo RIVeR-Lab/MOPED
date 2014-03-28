@@ -8,13 +8,13 @@
    <remap from="Image" to="/moped/Image"/>
    <remap from="Image/compressed" to="/moped/Image/compressed"/>
 
-     <include file="_launch.imagesenderlist"/>
+     <include file="$(find moped-example)/_launch.imagesenderlist"/>
  </group>
 
  <!-- Launch MOPED -->
  <group>
 	 <remap from="/Image" to="/moped/Image"/>	 
-   <include file="_launch.moped2"/>
+   <include file="$(find moped-example)/_launch.moped2"/>
  </group>
 
 </launch>
